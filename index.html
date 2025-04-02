@@ -49,11 +49,26 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
         .telegram-button img {
-            width: 30px; 
-            
+            width: 30px;
             height: auto;
             vertical-align: middle;
             margin-right: 5px;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .overlay img {
+            max-width: 80%;
+            max-height: 80%;
         }
 
         @media (min-width: 600px) {
@@ -87,5 +102,15 @@
         <img src="" alt="">
         Bot
     </a>
+
+    <div class="overlay" id="overlay">
+        <img src="https://lf16-bot-connector-sign.coze.com/obj/bot-studio-bot-connector-us/message_resources/11000007/photo/va/7442164544954761271/file_photo_bc70871f?lk3s=fd1f132d&x-expires=1775101715&x-signature=%2BRGFaaL0unwWs%2FH8Uyvvlp0G16g%3D" alt="PixelQAB">
+    </div>
+
+    <script>
+        setTimeout(function() {
+            document.getElementById('overlay').style.display = 'none';
+        }, 5000); // 5000 миллисекунд = 5 секунд
+    </script>
 </body>
 </html>
